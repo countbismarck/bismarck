@@ -30,8 +30,8 @@ const BankingBanner = () => {
             width='100%'
             height='100%'
             loop={true}
-            controls = {true}
-
+            playing={true}
+            controls = {false}
             />
            {/* <Heading>Private Banking no longer just for the<br /> super rich</Heading>
            <Paragraph>Otto Von Bismarck influence has shaped the financial industry for over 200 years. Now, we’re<br/> bringing it to the 21st century and giving you the opportunity to join the Count Bismarck famil</Paragraph>
