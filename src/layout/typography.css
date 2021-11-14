@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Avenir-next';
+    src: local('Avenir-next'),
+    url(../assets/fonts/AvenirNextLTPro-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Avenir-next-bold';
+    src: local('Avenir-next-bold'),
+    url(../assets/fonts/AvenirNextLTPro-Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'azo-sans';
+    src: local('azo-sans'),
+    url(../assets/fonts/AzoSans-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'azo-sans-black';
+    src: local('azo-sans'),
+    url(../assets/fonts/AzoSans-Black.ttf) format('truetype');
+}
