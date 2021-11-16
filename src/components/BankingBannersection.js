@@ -28,15 +28,6 @@ const BankingBanner = () => {
         <source src={video} type="video/mp4"/>
         <source src={video} type="video/ogg"/>
        </video>
-        {/* <ReactPlayer
-            className='react-player fixed-bottom'
-            url= {video}
-            width='100%'
-            height='100%'
-            loop={true}
-            playing={true}
-            controls = {false}
-            /> */}
             <VideoContent>
             <Heading>Elegance, Precision, Commuity, Performance</Heading>
             </VideoContent>
