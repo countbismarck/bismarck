@@ -54,7 +54,7 @@ const Future = () => (
     
 const FurureBlock = styled.div`
 background-color: #fff1e5;
-padding: 70px 0 200px 0;
+padding: 70px 0 70px 0;
 display: flex;
 justify-content: center;
 align-items: center;

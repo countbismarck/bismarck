@@ -54,9 +54,13 @@ const Header = () => {
   export default Header;  
 
 const Wrapper = styled.div`
+
 width: 100%;
 position: absolute;
-top: 0;
+left: 0; 
+right: 0; 
+margin-left: auto; 
+margin-right: auto; 
 z-index: 999 !important;
 `;
 const Container = styled.div`

@@ -4,7 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 import ReactPlayer from 'react-player'
 import video from "../assets/videos/video1.mp4";
-
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 const BankingBanner = () => {
   const data = useStaticQuery(
     graphql`
@@ -24,7 +24,11 @@ const BankingBanner = () => {
   <Wrapper>
      <Container>
         <Banner>
-        <ReactPlayer
+        <video loop muted autoPlay controls = 'false' width='100%' height='100%'>
+        <source src={video} type="video/mp4"/>
+        <source src={video} type="video/ogg"/>
+       </video>
+        {/* <ReactPlayer
             className='react-player fixed-bottom'
             url= {video}
             width='100%'
@@ -32,19 +36,12 @@ const BankingBanner = () => {
             loop={true}
             playing={true}
             controls = {false}
-            />
-           {/* <Heading>Private Banking no longer just for the<br /> super rich</Heading>
-           <Paragraph>Otto Von Bismarck influence has shaped the financial industry for over 200 years. Now, we’re<br/> bringing it to the 21st century and giving you the opportunity to join the Count Bismarck famil</Paragraph>
-           <VideoText>
-           <AnchorLink href='#'>
-             <SvgIcon>
-             <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
-</svg>
-</SvgIcon>
- Video Content
- </AnchorLink>
- </VideoText> */}
+            /> */}
+            <VideoContent>
+            <Heading>Private Banking no longer just for the<br /> super rich</Heading>
+            <Paragraph>Otto Von Bismarck influence has shaped the financial industry for over 200 years. Now, we’re<br/> bringing it to the 21st century and giving you the opportunity to join the Count Bismarck famil</Paragraph>
+            </VideoContent>
+           
         </Banner>
      </Container>
   </Wrapper>
@@ -60,7 +57,7 @@ position: relative;
     top: 0%;
     left: 0;
     width: 100%;
-    height: 430px;
+    height: 400px;
     background-color: #202252;
     z-index: -1;
   }
@@ -69,10 +66,24 @@ const Container = styled.div`
 max-width: 1170px;
 margin: 0 auto;
 padding: 0 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`;
+const VideoContent = styled.div`
+position: absolute;
+left: 0; 
+right: 0; 
+margin-left: auto; 
+margin-right: auto; 
+z-index: 999 !important;
+width:80% !important;
+max-width:100%;
 `;
 const Banner = styled.div`
-height: 680px;
-margin-top: -175px;
+width:800px !important;
+height: 400px;
 display: flex;
 flex-direction: column;
 justify-content: center;

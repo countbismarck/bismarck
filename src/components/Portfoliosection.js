@@ -13,7 +13,7 @@ const Portfolio = () => (
                    <TextBlock>
                       <h5>Invest in</h5>
                       <h4>Berlin properties</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                      <p>Harness unique growth potential by investing in exclusive residential and commercial real estate in Germany’s most diverse and vibrant property market.</p>
                    </TextBlock>
                    <Image>
                       <StaticImage src="../assets/images/portfolio-1.png" alt="" />
@@ -23,7 +23,7 @@ const Portfolio = () => (
                    <TextBlock>
                       <h5>Invest in</h5>
                       <h4>Art</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                      <p>Immerse yourself in the beautiful world of art by exploring meticulously curated investment opportunities in collections of both evolving and sought-after artists.</p>
                    </TextBlock>
                    <Image>
                       <StaticImage src="../assets/images/portfolio-2.png" alt="" />
@@ -33,7 +33,7 @@ const Portfolio = () => (
                    <TextBlock>
                       <h5>Invest in</h5>
                       <h4>Solar</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                      <p>Drive change in today’s energy mix and benefit from new structural industry trends, including dramatically improved economics in solar energy production, by investing in distinct growth opportunities.</p>
                    </TextBlock>
                    <Image>
                       <StaticImage src="../assets/images/portfolio-3.png" alt="" />
@@ -43,7 +43,7 @@ const Portfolio = () => (
                    <TextBlock>
                       <h5>Invest in</h5>
                       <SubHeading>Private Companies</SubHeading>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                      <p>Benefit from unique growth potential in non-registered offerings, ranging from innovative startups to emerging-growth companies and mature issuers across various industry sectors.</p>
                    </TextBlock>
                    <Image>
                       <StaticImage src="../assets/images/portfolio-4.png" alt="" />
@@ -53,7 +53,7 @@ const Portfolio = () => (
                    <TextBlock>
                       <h5>Invest in</h5>
                       <h4>Crypto </h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                      <p>Ready to forego mainstream investing in search of exceptional financial return potential? Explore select investment opportunities in leading crypto currencies based on a rigid analysis of the risks involved.</p>
                    </TextBlock>
                    <Image>
                       <StaticImage src="../assets/images/portfolio-5.png" alt="" />
@@ -63,7 +63,7 @@ const Portfolio = () => (
                    <TextBlock>
                       <h5>Invest in</h5>
                       <h4>ESG</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+                      <p>Employ a holistic approach to investing to make a positive environmental and social impact without compromising on exceptional financial performance.</p>
                    </TextBlock>
                    <Image>
                       <StaticImage src="../assets/images/portfolio-6.png" alt="" />
@@ -147,6 +147,7 @@ const SubHeading = styled.h4`
     }
 `;
 const Image = styled.div`
+min-width:230px !important;
 width: 90%;
 margin-bottom: -50px;
     @media only screen and (min-width:992px) and (max-width:1150px){
