@@ -24,7 +24,7 @@ const BankingBanner = () => {
   <Wrapper>
      <Container>
         <Banner>
-        <video loop muted autoPlay controls = 'false' width='100%' height='100%'>
+        <video loop muted autoPlay width='100%' height='100%'>
         <source src={video} type="video/mp4"/>
         <source src={video} type="video/ogg"/>
        </video>
