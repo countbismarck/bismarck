@@ -31,7 +31,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
-        "ssr": false,
         "displayName": false,
         "fileName": false,
         "minify": false,
