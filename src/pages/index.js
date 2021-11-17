@@ -1,8 +1,6 @@
 import * as React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import GlobalStyle from '../layout/globalStyles';
 import FontStyles from "../layout/fontstyles";
 import Hero from "../components/Herosection";
@@ -26,7 +24,6 @@ const IndexPage = () => (
      <Portfolio />
      <Financial />
      <Backed />
-
   </Layout>
   )
   export default IndexPage  

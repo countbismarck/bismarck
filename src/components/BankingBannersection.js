@@ -1,10 +1,7 @@
 import * as React from "react"
 import styled from "styled-components";
 import { graphql, useStaticQuery } from 'gatsby'
-import BackgroundImage from 'gatsby-background-image'
-import ReactPlayer from 'react-player'
 import video from "../assets/videos/video1.mp4";
-import AnchorLink from 'react-anchor-link-smooth-scroll'
 const BankingBanner = () => {
   const data = useStaticQuery(
     graphql`
@@ -37,7 +34,7 @@ const BankingBanner = () => {
   </Wrapper>
   )
 }
-  export default BankingBanner;
+export default BankingBanner;
     
 const Wrapper = styled.div`
 position: relative;
@@ -85,6 +82,7 @@ position: relative;
 const Heading = styled.h2`
 color: #fff;
 margin: 0;
+text-shadow: 1px 1px 6px #000000;
 line-height: 56px;
   @media only screen and (max-width:991px){
     line-height: 45px;

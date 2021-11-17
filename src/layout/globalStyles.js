@@ -2,7 +2,8 @@ import { createGlobalStyle } from 'styled-components';
  
 const GlobalStyle = createGlobalStyle`
 
-body{margin:auto; float:none; font-family: 'QuasimodaRegular';color: #B89260;font-weight: 400; max-width:1800px;}
+body{margin:auto; float:none; font-family: 'QuasimodaRegular';color: #B89260;font-weight: 400;
+max-width:1600px;}
 
 h1,h2,h3,h4,h5,h6{font-family: 'BaskervilleOldFace';margin:0;color: #B89260; font-weight: 400;margin-bottom:25px;}
 h1, h2{font-size:56px; line-height:64px;}
