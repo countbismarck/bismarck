@@ -5,8 +5,8 @@ import { StaticImage } from "gatsby-plugin-image";
 const Portfolio = () => (
     <Wrapper>
        <Container>
-          <h2>Diverse Portfolio of Curated<br/>  Investment Products</h2>
-          <p>See our extensive portfolio from all of those who have advanced with Count Bismarck.</p>
+          <h2>Curated Investments</h2>
+          <ParagraphTop>We offer a diverse Portfolio of preselected and curated investment Product. Explore the investment topic below.</ParagraphTop>
           <PortfolioBlock>
              <Grid>
                 <Item>
@@ -145,6 +145,11 @@ const SubHeading = styled.h4`
     @media only screen and (min-width:901px) and (max-width:991px){
       font-size: 25px;
     }
+`;
+const ParagraphTop = styled.p`
+    margin:auto;
+    width:100%;
+    max-width:640px;
 `;
 const Image = styled.div`
 min-width:230px !important;

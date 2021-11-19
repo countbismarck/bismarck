@@ -18,6 +18,7 @@
     "gatsby-plugin-styled-components": "^5.1.0",
     "gatsby-source-filesystem": "^4.1.1",
     "gatsby-transformer-sharp": "^4.1.0",
+    "moving-letters": "^1.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
     "react-anchor-link-smooth-scroll": "^1.0.12",

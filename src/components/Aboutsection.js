@@ -26,10 +26,10 @@ const About = () => {
          fluid={imageData}
          backgroundColor={`#040e18`}
       >
-    <Wrapper id="membership">        
+    <Wrapper>        
        <Container>
           <Heading>About Us</Heading>
-          <p>Count Bismarck Modern Private Banking is fintech plattform offering unqies aceed to<br /> digital banking.  we are democratising ....</p>
+          <p>Count Bismarck Modern Private Banking is a new fintech platform, combining digital banking,<br/> investments and club memberships. We are democratising Private Banking so that now all our <br/> clients have access to the special benefits previously available only to the very few.</p>
           <AboutBlock>
              <Grid>
                 <Item>
@@ -77,7 +77,7 @@ const About = () => {
                 </Item>
              </Grid>
              <h3>Become Part Of  The Count Bismarck Family</h3>
-             <Button><Link to="/">Become a Count Bismarck Member</Link></Button>
+             <Button><Link to="/">Join Count Bismarck</Link></Button>
           </AboutBlock>
        </Container>       
     </Wrapper>

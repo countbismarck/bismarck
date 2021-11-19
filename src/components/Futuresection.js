@@ -28,7 +28,7 @@ const Future = () => (
                       </Image>
                       <CardInfo>
                          <h4>Wealth management at your fingertips</h4>
-                         <p>Time is precious and dreams are not just for when you're asleep. Our excellent wealth management allows you to achieve what you already know is possible and more.</p>
+                         <p>Time is precious and dreams are not just for when you're asleep. Our excellent wealth management allows you to achieve what you already know is possible and more. We harness AI and Quantum Computing to enhance our research</p>
                          <Number>02</Number>
                       </CardInfo>
                    </Card>
@@ -60,11 +60,9 @@ justify-content: center;
 align-items: center;
 text-align: center;
     @media only screen and (max-width:991px){
-        padding: 40px 0 150px 0;
+        padding: 40px 0;
     }
-    @media only screen and (max-width:767px){
-        padding: 40px 0 120px 0;
-    }
+  
 `;
 const Container = styled.div`
 max-width: 1170px;

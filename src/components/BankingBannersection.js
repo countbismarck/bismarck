@@ -1,6 +1,9 @@
 import * as React from "react"
 import styled from "styled-components";
 import { graphql, useStaticQuery } from 'gatsby'
+import { SunnyMorning } from 'moving-letters'
+
+
 import video from "../assets/videos/video1.mp4";
 const BankingBanner = () => {
   const data = useStaticQuery(
@@ -26,7 +29,8 @@ const BankingBanner = () => {
         <source src={video} type="video/ogg"/>
        </video>
             <VideoContent>
-            <Heading>Elegance, Precision, Commuity, Performance</Heading>
+              <SunnyMorning text='Elegance, Precision' />
+              <SunnyMorning text='Commuity, Performance' />
             </VideoContent>
            
         </Banner>
@@ -43,20 +47,30 @@ position: relative;
     position: absolute;
     top: 0%;
     left: 0;
-    width: 100%;
-    height: 400px;
+    width: 100%;    
     background-color: #202252;
     z-index: -1;
+    @media only screen and (min-width:768px){
+      height: 400px;
+    }
+    @media only screen and (max-width:767px){
+      height: 100%;
+    }
   }
 `;
 const Container = styled.div`
 max-width: 1170px;
 margin: 0 auto;
-padding: 0 15px;
 display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+@media only screen and (min-width:768px){
+  padding: 0 15px;
+}
+@media only screen and (max-width:767px){
+  padding: 0px;
+}
 `;
 const VideoContent = styled.div`
 position: absolute;
@@ -65,12 +79,32 @@ right: 0;
 margin-left: auto; 
 margin-right: auto; 
 z-index: 999 !important;
-width:80% !important;
+width:65% !important;
 max-width:100%;
+h1{
+  color: #fff;
+  margin: 0;
+  font-size:3rem;
+  text-shadow: 1px 1px 6px #000000;
+  line-height: 56px;
+  @media only screen and (max-width:991px){
+    line-height: 45px;
+  }
+  @media only screen and (max-width:599px){
+    line-height: 35px;
+  }
+  @media only screen and (min-width:768px){
+    font-size:3rem;
+  }
+  @media only screen and (max-width:767px){
+    font-size:2rem;
+  }
+  @media only screen and (max-width:479px){
+    font-size:1.5rem;
+  }
+}
 `;
 const Banner = styled.div`
-width:800px !important;
-height: 400px;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -78,6 +112,16 @@ align-items: center;
 text-align: center;
 padding: 0px;
 position: relative;
+@media only screen and (min-width:768px){
+  width:800px !important;
+  height: 400px;
+}
+@media only screen and (min-width:768px) and (max-width:830px){
+  width:740px !important;
+}
+@media only screen and (max-width:767px){
+  max-width:100%;
+}
 `;
 const Heading = styled.h2`
 color: #fff;

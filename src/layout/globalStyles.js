@@ -19,7 +19,10 @@ button:hover::before {opacity: 1;-webkit-transform: scale(1, 1);transform: scale
 .svg-icon {width: 1.3em;height: 1.3em; margin:0px 10px 0 0; float: left;}
 .svg-icon path {fill: #B89260;}
 
-
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
 @media only screen and (min-width:1101px) and (max-width:1250px){
 h4{font-size:28px; line-height:30px;}
 }

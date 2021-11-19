@@ -6,8 +6,8 @@ const Backed = () => (
   <Wrapper id="contact">
      <Container>
            <Heading>Backed by giants</Heading>
-           <p>Our superior Next Generation Private banking provides an immense benefit into the lives of<br/> our clients’ personal and business interactions.</p>
-           <Button><Link to="/">Join Bismarck Today</Link></Button>
+           <p>Our ambition is shared by our business partners and investors - the benefits of Private Banking<br/> should no longer be available only to the very few.</p>
+           <Button><Link to="/">Join Count Bismarck Today</Link></Button>
      </Container>
   </Wrapper>
   )
