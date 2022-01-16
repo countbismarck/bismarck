@@ -1,5 +1,6 @@
 import * as React from "react"
 import styled from "styled-components";
+import { Link } from "gatsby"
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -26,7 +27,10 @@ const Financial = () => {
       >
     <Wrapper>
       <Container>
-            <Heading>WE SOLVE YOUR FINANCIAL SECURITY<br/> WITH TECHNOLOGY AND DATA,<br/> A WHOLE LOT OF DATA.</Heading>
+        <h2>Backed by giants</h2>
+        <Paragraph>Our ambition is shared by our business partners<br/> and investors - the benefits of Private Banking should <br/>no longer be available only to the very few</Paragraph>
+        <Button><Link to="/">Join Count Bismarck Today</Link></Button>
+
       </Container>
     </Wrapper>
     </BackgroundImage>
@@ -40,34 +44,38 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-padding: 150px 0px;
-    @media only screen and (max-width:991px){
-        padding: 100px 0;
-    }
+padding:50px 0px;
+  
 `;
 const Container = styled.div`
 max-width: 1170px;
 margin: 0 auto;
 padding: 0 15px;
 `;
-const Heading = styled.h2`
+const Paragraph = styled.p`
 color: #fff;
-margin: 0;
-font-size: 42px;
-line-height: 50px;
-  @media only screen and (max-width:991px){
-    font-size: 34px;
-    line-height: 40px;
-        br{
-            display: none;
-        }
-  }
-  @media only screen and (max-width:599px){
-    font-size: 30px;
-    line-height: 35px;
-  }
-  @media only screen and (max-width:479px){
-    font-size: 22px;
+font-size: 26px;
+line-height: 35px;
+  @media only screen and (max-width:767px){
+    font-size: 20px;
     line-height: 30px;
   }
+  @media only screen and (max-width:479px){
+    font-size: 16px;
+    line-height: 26px;
+  }
+
 `;
+const Button = styled.button`
+&:hover a{
+    color: #222454;
+ }
+a {
+    text-decoration: none;
+    color: #707070;
+  }
+  a:hover{
+    color: #222454;
+  }
+`;
+

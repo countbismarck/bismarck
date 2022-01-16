@@ -2,6 +2,7 @@ import * as React from "react"
 import styled from "styled-components";
 import { graphql, useStaticQuery } from 'gatsby'
 import { SunnyMorning } from 'moving-letters'
+import SunnyMorningNew from './SunnyMorningNew'
 
 
 import video from "../assets/videos/video1.mp4";
@@ -24,13 +25,13 @@ const BankingBanner = () => {
   <Wrapper>
      <Container>
         <Banner>
-        <video loop muted autoPlay width='100%' height='100%'>
+        <video playsinline loop muted autoPlay width='100%' height='100%' preload='auto' >
         <source src={video} type="video/mp4"/>
         <source src={video} type="video/ogg"/>
        </video>
             <VideoContent>
-              <SunnyMorning text='Elegance, Precision' />
-              <SunnyMorning text='Commuity, Performance' />
+              <SunnyMorningNew text='Elegance, Precision' />
+              <SunnyMorningNew text='Commuity, Performance' />
             </VideoContent>
            
         </Banner>
@@ -51,7 +52,7 @@ position: relative;
     background-color: #202252;
     z-index: -1;
     @media only screen and (min-width:768px){
-      height: 400px;
+      height: 100%;
     }
     @media only screen and (max-width:767px){
       height: 100%;
@@ -78,7 +79,7 @@ left: 0;
 right: 0; 
 margin-left: auto; 
 margin-right: auto; 
-z-index: 999 !important;
+z-index: 99 !important;
 width:65% !important;
 max-width:100%;
 h1{
@@ -113,8 +114,8 @@ text-align: center;
 padding: 0px;
 position: relative;
 @media only screen and (min-width:768px){
-  width:800px !important;
-  height: 400px;
+  width:100% !important;
+  height: auto;
 }
 @media only screen and (min-width:768px) and (max-width:830px){
   width:740px !important;

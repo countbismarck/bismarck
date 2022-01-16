@@ -25,6 +25,7 @@ const About = () => {
          Tag="section"
          fluid={imageData}
          backgroundColor={`#040e18`}
+         id="about"
       >
     <Wrapper>        
        <Container>

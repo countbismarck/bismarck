@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 
 const Portfolio = () => (
-    <Wrapper>
+    <Wrapper id="cinvestments">
        <Container>
           <h2>Curated Investments</h2>
           <ParagraphTop>We offer a diverse Portfolio of preselected and curated investment Product. Explore the investment topic below.</ParagraphTop>
@@ -79,6 +79,7 @@ const Portfolio = () => (
 const Wrapper = styled.div`
 padding: 70px 0;
 display: flex;
+background-color:#fff1e5;
 justify-content: center;
 align-items: center;
 text-align: center;

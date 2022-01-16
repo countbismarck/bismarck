@@ -21,7 +21,7 @@ const Service = () => (
                    </TextBlock>
                 </Item>
              </Grid>
-             <Grid2 id="cinvestments">
+             <Grid2>
                 <Item2>
                    <TextBlock>
                       <SubHeading2>Your wealth, your way</SubHeading2>

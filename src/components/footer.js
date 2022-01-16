@@ -1,12 +1,40 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
+import { graphql, useStaticQuery, Link } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
 const Footer = () => {
+   const data = useStaticQuery(
+      graphql`
+        query {
+          bankCardBg: file(relativePath: { eq: "bank-card.jpg" }) {
+            childImageSharp {
+              fluid(quality: 100, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+              }
+            }
+          }
+        }
+      `
+    )
+    const imageData = data.bankCardBg.childImageSharp.fluid
   return (
-  <Wrapper>
-     <FooterTop>
+     <>
+   <BackgroundImage
+   Tag="section"
+   fluid={imageData}
+   backgroundColor={`#040e18`}
+   id="contact"
+>
+<Wrapper>
+<Container>
+  <h2>Backed by giants</h2>
+  <Paragraph>Our ambition is shared by our business partners<br/> and investors - the benefits of Private Banking should <br/>no longer be available only to the very few</Paragraph>
+  <Button2><Link to="/">Join Count Bismarck Today</Link></Button2>
+
+</Container>
+<FooterTop>
         <Container>
            <Logo>
               <StaticImage src="../assets/images/bismarck-logo-gold.png" alt="" />
@@ -30,7 +58,9 @@ const Footer = () => {
            </form>
         </Container>
      </FooterTop>
-     <FooterBottom>
+</Wrapper>
+</BackgroundImage>  
+<FooterBottom>
         <Container>
            <BottomContent>
                  <SocialIcons>
@@ -53,7 +83,7 @@ const Footer = () => {
                  </SocialIcons>
                  <Links id="f_nav">
                     <li>
-                       <Link to="/">
+                       <Link to="/legal-terms">
                        Legal terms
                        </Link>
                     </li>
@@ -81,17 +111,35 @@ const Footer = () => {
                  </BottomContent>
         </Container>
      </FooterBottom>
-  </Wrapper>
+</>
   );
   };
+  const Button2 = styled.button`
+&:hover a{
+    color: #222454;
+ }
+a {
+    text-decoration: none;
+    color: #707070;
+  }
+  a:hover{
+    color: #222454;
+  }
+`;
   export default Footer; 
 
-const Wrapper = styled.div`
-
-`;
+  const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding:50px 0px;
+    
+  `;
 const FooterTop = styled.div`
-background-color: #202252;
-padding: 35px 0;
+background-color: transparent;
+padding: 55px 0 15px;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -106,6 +154,20 @@ padding: 0 15px;
 const Logo = styled.div`
   width: auto;
   margin-bottom: 30px;
+`;
+const Paragraph = styled.p`
+color: #fff;
+font-size: 26px;
+line-height: 35px;
+  @media only screen and (max-width:767px){
+    font-size: 20px;
+    line-height: 30px;
+  }
+  @media only screen and (max-width:479px){
+    font-size: 16px;
+    line-height: 26px;
+  }
+
 `;
 const NewsLetter = styled.div`
 width:550px;
