@@ -12,7 +12,7 @@ import Portfolio from "../components/Portfoliosection";
 import Financial from "../components/Financialsection";
 
 const IndexPage = () => (
-  <Layout>
+  <Layout page="home">
      <GlobalStyle />
      <FontStyles />
      <Hero />

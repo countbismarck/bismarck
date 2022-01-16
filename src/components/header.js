@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import BgImg from '../assets/images/page-banner.png';
 
-const Header = ({bg}) => {
+const Header = ({bg, page}) => {
   console.log('Bg color',bg)
   const [open, setOpen] = useState(false)
   return (
@@ -23,19 +24,19 @@ const Header = ({bg}) => {
               </StyledBurger>
               <Ul open={open}>
                  <li>
-                    <AnchorLink href='#about'>About Us</AnchorLink>
+                    {page ==='home' ? <AnchorLink href='#about'>About Us</AnchorLink> : <Link to="/#about">About Us</Link>}
                  </li>
                  <li>
-                    <AnchorLink href='#dbanking'>Digital banking</AnchorLink>
+                 {page ==='home' ? <AnchorLink href='#dbanking'>Digital banking</AnchorLink> : <Link to="/#dbanking">Digital banking</Link>}
                  </li>
                  <li>
-                    <AnchorLink href='#cinvestments'>Curated Investments</AnchorLink>
+                    {page ==='home' ? <AnchorLink href='#cinvestments'>Curated Investments</AnchorLink> : <Link to="/#cinvestments">Curated Investments</Link>}
                  </li>
                  <li>
-                    <AnchorLink href='#membership'>Exclusive Membership</AnchorLink>
+                    {page ==='home' ? <AnchorLink href='#membership'>Exclusive Membership</AnchorLink> : <Link to="/#membership">Exclusive Membership</Link>}
                  </li>
                  <li>
-                    <AnchorLink href='#contact'>Contact</AnchorLink>
+                    {page ==='home' ? <AnchorLink href='#contact'>Contact</AnchorLink> : <Link to="/#contact">Contact</Link>}
                  </li>
                  <li>
                     <AnchorLink href='#'>
