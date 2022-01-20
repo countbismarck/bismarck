@@ -1,6 +1,7 @@
 import * as React from "react"
 import styled from "styled-components";
 import { graphql, useStaticQuery } from 'gatsby'
+import { isSafari } from 'react-device-detect';
 
 import { SunnyMorning } from 'moving-letters'
 import SunnyMorningNew from './SunnyMorningNew'
@@ -28,12 +29,22 @@ const BankingBanner = () => {
   <Wrapper>
      <Container>
         <Banner>
+          { isSafari ? 
+          (
+            <VideoWrapper>
+            <iframe src={`${videomp4}?autoplay=1&controls=0&loop=1`} width="100%" height="349" loop="true" allow="autoplay; encrypted-media"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </VideoWrapper>
+          ):
+          (
+            <video playsinline loop muted autoPlay width='100%' height='100%' preload='yes'  >
+                <source src={videomp4} type="video/mp4"/>
+                <source src={videoogv} type="video/ogv" />
+                <source src={videowebm} type="video/webm"/>
+            </video>
+          )}
+          
         
-        <video playsinline loop muted autoPlay width='100%' height='100%' preload='yes'  >
-          <source src={videomp4} type="video/mp4"/>
-          <source src={videoogv} type="video/ogv" />
-          <source src={videowebm} type="video/webm"/>
-       </video>
+        
             {/* <VideoContent>
               <SunnyMorningNew text='Elegance, Precision' />
               <SunnyMorningNew text='Commuity, Performance' />
@@ -45,7 +56,20 @@ const BankingBanner = () => {
   )
 }
 export default BankingBanner;
-    
+const VideoWrapper = styled.div`
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  width:100%;
+  & > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border:none !important;
+  }
+`    
 const Wrapper = styled.div`
 position: relative;
   &::before{
