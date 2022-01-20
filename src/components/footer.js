@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -30,12 +31,12 @@ const Footer = () => {
 <Wrapper>
 <Container>
   <h2>Backed by giants</h2>
-  <Paragraph>Our ambition is shared by our business partners<br/> and investors - the benefits of Private Banking should <br/>no longer be available only to the very few</Paragraph>
-  <Button2><Link to="/">Join Count Bismarck Today</Link></Button2>
+  <Paragraph>Our ambition is shared by our business partners and investors - to bring the special benefits of Private Banking to all our clients</Paragraph>
+  <Button2><AnchorLink href='#contact'>Join Count Bismarck Today</AnchorLink></Button2>
 
 </Container>
 <FooterTop>
-        <Container>
+        <Container id="contact">
            <Logo>
               <StaticImage src="../assets/images/bismarck-logo-gold.png" alt="" />
            </Logo>
@@ -88,22 +89,22 @@ const Footer = () => {
                        </Link>
                     </li>
                     <li>
-                       <Link to="/">
+                       <Link to="/personal-data/">
                        Personal data 
                        </Link>
                     </li>
                     <li>
-                       <Link to="/sitemamp-0.xml">
+                       <Link to="/sitemamp/">
                        Sitemap
                        </Link>
                     </li>
                     <li>
-                       <Link to="/">
+                    <AnchorLink href='#contact'>
                        Contact
-                       </Link>
+                       </AnchorLink>
                     </li>
                     <li>
-                       <Link to="/">
+                       <Link to="/credits/">
                        Credits
                        </Link>
                     </li>
@@ -159,6 +160,7 @@ const Paragraph = styled.p`
 color: #fff;
 font-size: 26px;
 line-height: 35px;
+max-width:600px;
   @media only screen and (max-width:767px){
     font-size: 20px;
     line-height: 30px;

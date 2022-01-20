@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 const About = () => {
     const data = useStaticQuery(
@@ -78,7 +79,7 @@ const About = () => {
                 </Item>
              </Grid>
              <h3>Become Part Of  The Count Bismarck Family</h3>
-             <Button><Link to="/">Join Count Bismarck</Link></Button>
+             <Button><AnchorLink href='#contact'>Join Count Bismarck</AnchorLink></Button>
           </AboutBlock>
        </Container>       
     </Wrapper>

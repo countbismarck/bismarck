@@ -1,11 +1,14 @@
 import * as React from "react"
 import styled from "styled-components";
 import { graphql, useStaticQuery } from 'gatsby'
+
 import { SunnyMorning } from 'moving-letters'
 import SunnyMorningNew from './SunnyMorningNew'
 
 
-import video from "../assets/videos/video1.mp4";
+import videomp4 from "../assets/videos/video1.mp4";
+import videowebm from "../assets/videos/video1.webm";
+import videoogv from "../assets/videos/video1.ogv";
 const BankingBanner = () => {
   const data = useStaticQuery(
     graphql`
@@ -25,14 +28,16 @@ const BankingBanner = () => {
   <Wrapper>
      <Container>
         <Banner>
-        <video playsinline loop muted autoPlay width='100%' height='100%' preload='auto' >
-        <source src={video} type="video/mp4"/>
-        <source src={video} type="video/ogg"/>
+        
+        <video playsinline loop muted autoPlay width='100%' height='100%' preload='yes'  >
+          <source src={videomp4} type="video/mp4"/>
+          <source src={videoogv} type="video/ogv" />
+          <source src={videowebm} type="video/webm"/>
        </video>
-            <VideoContent>
+            {/* <VideoContent>
               <SunnyMorningNew text='Elegance, Precision' />
               <SunnyMorningNew text='Commuity, Performance' />
-            </VideoContent>
+            </VideoContent> */}
            
         </Banner>
      </Container>

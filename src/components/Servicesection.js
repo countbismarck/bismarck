@@ -6,7 +6,7 @@ const Service = () => (
     <Wrapper>
        <Container>
           <Heading>Why should the benefits of Private Banking and<br/> Wealth Management be available only to the very few.</Heading>
-          <p>Join the Bismarck family.</p>
+          <p>Join the Count Bismarck family.</p>
           <ServiceBlock>
              <Grid id="dbanking">
                 <Item>

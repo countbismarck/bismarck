@@ -40,7 +40,7 @@ const Future = () => (
                       </Image>
                       <CardInfo>
                          <h4>Build relationships with exclusive memberships</h4>
-                         <p>Exclusive multi-use private memberships allows you to build long-lasting relationships with like-minded people, gives you invitations to global events, and access to VIP airport lounges when you travel.</p>
+                         <p>Our exclusive multi-use private memberships allow you to build long-lasting relationships with like-minded people, gives you invitations to global events, and access to VIP airport lounges when you travel.</p>
                          <Number>03</Number>
                       </CardInfo>
                    </Card>

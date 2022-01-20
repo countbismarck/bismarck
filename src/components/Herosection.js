@@ -35,7 +35,7 @@ const Hero = () => {
           </Logo>
           <Heading>Private Banking and Wealth Management</Heading>
           <p>designed for tomorrow, available today</p>
-          <Button><Link to="/">Become a Count Bismarck Member</Link></Button>
+          <Button><AnchorLink href='#contact'>Become a Count Bismarck Member</AnchorLink></Button>
           <p>Powered by AI</p>
        </Herosection>
     </Container>
