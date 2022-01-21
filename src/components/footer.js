@@ -46,16 +46,36 @@ const Footer = () => {
                     data-netlify="true"
                   >
                      <input type="hidden" name="form-name" value="emailsubscribe" />
-           <NewsLetter>
-            <Input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  id="email"
-                  required
-                  />
-              <Button type="submit">Subscribe to Newsletter</Button>
-           </NewsLetter>
+             <NewsLetter>
+                    <Input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      id="email"
+                      required
+                      />
+                  <Button type="submit">Subscribe to Newsletter</Button>   
+               
+             </NewsLetter>
+            <Checkbox>
+                    {/* <Input 
+                    type="checkbox" 
+                    required
+                    />
+                    <span>By subscribing, I agree to Count Bismarck's privacy policy</span>  */}
+
+            <label className="check">
+            <Input 
+            type="checkbox" 
+            required
+            />
+            <span className="checkmark"></span>
+            </label>
+            By subscribing, I agree to Count Bismarck's privacy policy
+            </Checkbox>
+
+
+
            </form>
         </Container>
      </FooterTop>
@@ -173,7 +193,6 @@ max-width:600px;
 `;
 const NewsLetter = styled.div`
 width:550px;
-float: left;
 display: flex;
 position: relative;
   @media (max-width:599px) {
@@ -205,7 +224,58 @@ const Input = styled.input`
       width: 90%;
       border-right: 2px solid #B89260;
     }
-`;
+  `;
+  const Checkbox = styled.div`
+  display: flex;
+justify-content: center;
+align-items: center;margin-top:10px;
+ 
+
+.check {
+  position: relative;
+  padding-left:10px;
+   cursor: pointer;
+ width:18px;
+  height: 18px;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:18px;
+  width:18px;
+  background-color: #B89260;
+}
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.check input:checked ~ .checkmark {
+  background-color: #B89260;
+}
+
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+.check .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left:6px;
+  top: 2px;
+  width:4px;
+  height:8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+  `;
 const Button = styled.button`
   background: #B89260;
   width: 45%;

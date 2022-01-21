@@ -1,7 +1,9 @@
 import * as React from "react"
 import styled from "styled-components";
 import { graphql, useStaticQuery } from 'gatsby'
-import { isSafari } from 'react-device-detect';
+import { isMobile } from 'react-device-detect';
+
+
 
 import { SunnyMorning } from 'moving-letters'
 import SunnyMorningNew from './SunnyMorningNew'
@@ -25,14 +27,44 @@ const BankingBanner = () => {
     `
   )
   const imageData = data.bankingNanneBgImg.childImageSharp.fluid
+  const videoRendered = (isMobile)=>{
+    if (isMobile) {
+      return(
+        <VideoWrapper>
+          <iframe src={`${videomp4}?autoplay=1&controls=0&loop=1`}
+           width="560"
+           height="315" loop="true" allow="autoplay; encrypted-media"
+            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>            
+          </iframe>
+        </VideoWrapper>
+      )
+    }
+    return(
+      <video playsinline loop muted autoPlay width='100%' height='100%' preload='yes'  >
+          <source src={videomp4} type="video/mp4"/>
+          <source src={videoogv} type="video/ogv" />
+          <source src={videowebm} type="video/webm"/>
+      </video>
+    )
+  }
   return(
   <Wrapper>
      <Container>
-        <Banner>
-          { isSafari ? 
+        <VideoWrapper>
+        <iframe src={`${videomp4}?autoplay=1&controls=0&loop=1`} width="100%" loop="true" allow="autoplay; encrypted-media"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </VideoWrapper>
+        <HtmlVideo>
+          <video playsinline loop muted autoPlay width='100%' height='100%' preload='yes'  >
+              <source src={videomp4} type="video/mp4"/>
+              <source src={videoogv} type="video/ogv" />
+              <source src={videowebm} type="video/webm"/>
+          </video>
+        </HtmlVideo>
+        
+          {/* { isMobile ? 
           (
             <VideoWrapper>
-            <iframe src={`${videomp4}?autoplay=1&controls=0&loop=1`} width="100%" height="349" loop="true" allow="autoplay; encrypted-media"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <iframe src={`${videomp4}?autoplay=1&controls=0&loop=1`} width="100%" height="100%" loop="true" allow="autoplay; encrypted-media"  frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </VideoWrapper>
           ):
           (
@@ -41,7 +73,7 @@ const BankingBanner = () => {
                 <source src={videoogv} type="video/ogv" />
                 <source src={videowebm} type="video/webm"/>
             </video>
-          )}
+          )} */}
           
         
         
@@ -50,24 +82,37 @@ const BankingBanner = () => {
               <SunnyMorningNew text='Commuity, Performance' />
             </VideoContent> */}
            
-        </Banner>
      </Container>
   </Wrapper>
   )
 }
 export default BankingBanner;
+const HtmlVideo = styled.div`
+padding:0px;
+margin:0px;
+@media only screen and (min-width:768px){
+  display:block !important;
+}
+@media only screen and (max-width:767px){
+  display:none !important;
+}
+` 
 const VideoWrapper = styled.div`
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  width:100%;
-  & > iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+@media only screen and (min-width:768px){
+  display:none !important;
+}
+@media only screen and (max-width:767px){
+  display:block !important;
+}
+position: relative !important;
+    overflow: hidden;
+    width:100% !important;
+    min-height:70vh;   
+    margin:0px !important;
+  & > iframe { 
+    min-height:70vh;   
     width: 100%;
-    height: 100%;
-    border:none !important;
+    border: 0;
   }
 `    
 const Wrapper = styled.div`

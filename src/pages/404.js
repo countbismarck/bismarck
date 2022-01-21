@@ -19,7 +19,7 @@ const NotFoundPage = () => (
   </Layout>
 )
 const Wrapper = styled.div`
-padding: 70px 0;
+padding: 100px 0 60px;
 display: flex;
 background-color:#fff1e5;
 justify-content: center;
