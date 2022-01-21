@@ -38,7 +38,7 @@ const About = () => {
                    <AboutBox>
                       <TextBlock>
                          <h3>Digital Banking</h3>
-                         <p>Gain access to an advanced online banking platform created for this century using new cutting-edge features. Partnered with Railsbank.</p>
+                         <p>Gain access to an advanced online banking platform created for this century using new cutting-edge features partnered with Treezor.</p>
                       </TextBlock>
                       <AboutIcon>
                          <StaticImage src="../assets/images/icon1.png" alt="" />
